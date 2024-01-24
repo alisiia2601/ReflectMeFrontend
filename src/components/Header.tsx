@@ -1,39 +1,59 @@
-import { Link, useFetcher } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
 import auth from '../lib/auth';
 
-const Header = () => {
+const Header: React.FC = () => {
     const isAuthenticated = auth.isSignedIn();
-    const fetcher = useFetcher();
+    const [signOutError, setSignOutError] = useState<string | null>(null);
+
+    const handleSignOut = async () => {
+        try {
+            // Perform the sign-out logic using the fetch API or your preferred method
+            // Example:
+            const response = await fetch('/sign-out', { method: 'POST' });
+
+            if (response.ok) {
+                // Perform any additional sign-out logic (e.g., clearing user data)
+            } else {
+                // Handle sign-out error without exposing details
+                setSignOutError('Sign-out failed. Please try again.');
+            }
+        } catch (error) {
+            // Handle other errors during sign-out without exposing details
+            setSignOutError('Error during sign-out. Please try again.');
+        }
+    };
 
     return (
         <div className={classes.header}>
             <Link to="/" className={classes.logoLink}>
-                <h1>The Mern</h1>
+                <h1>ReflectMe</h1>
             </Link>
             <div className={classes.headerActions}>
-                {isAuthenticated ?
+                {isAuthenticated ? (
                     <>
                         <Link to="/create-post" className={classes.buttonLink}>
-                            <button className={classes.button}>New post</button>
+                            <button className={classes.button}>New Post</button>
                         </Link>
-                        <fetcher.Form method='post' action='/sign-out'>
-                            <button type='submit' className={classes.button}>Sign out</button>
-                        </fetcher.Form>
+                        <button onClick={handleSignOut} className={classes.button}>
+                            Sign Out
+                        </button>
                     </>
-                    :
+                ) : (
                     <>
                         <Link to="/sign-up" className={classes.buttonLink}>
-                            <button className={classes.button}>Sign up</button>
+                            <button className={classes.button}>Sign Up</button>
                         </Link>
                         <Link to="/sign-in" className={classes.buttonLink}>
-                            <button className={classes.button}>Sign in</button>
+                            <button className={classes.button}>Sign In</button>
                         </Link>
                     </>
-                }
+                )}
             </div>
+            {signOutError && <p className={classes.error}>{signOutError}</p>}
         </div>
-    )
-}
+    );
+};
 
 export default Header;

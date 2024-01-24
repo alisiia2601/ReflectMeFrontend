@@ -7,7 +7,6 @@ function App() {
     <>
       <Header />
       <div className={classes.content}>
-        <div className={classes.centerText}>THEMERN</div>
         <Outlet />
       </div>
     </>
