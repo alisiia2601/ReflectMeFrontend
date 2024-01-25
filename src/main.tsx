@@ -17,6 +17,7 @@ import { action as voteAction } from './components/Vote.tsx';
 import { action as deletePostAction } from "./components/DeletePost";
 import { action as deleteCommentAction } from "./components/DeleteComment";
 import UpdatePost, { action as updatePostAction } from "./routes/UpdatePost.tsx";
+import MyProfile from './components/MyProfile.tsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "posts",
         action: () => {
-          return redirect("/");
+          return redirect("my-posts");
         },
       },
       {
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
             path: "/posts/:id/update",
             action: updatePostAction,
             element: <UpdatePost />,
+          },
+          {
+            path: "my-profile",
+            element: <MyProfile />
           },
         ]
       },

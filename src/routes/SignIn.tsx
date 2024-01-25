@@ -30,7 +30,7 @@ export const action = async (args: ActionFunctionArgs) => {
     auth.signIn(token);
 
 
-    return redirect('/');
+    return redirect('my-profile');
 }
 
 const SignIn = () => {
@@ -38,7 +38,7 @@ const SignIn = () => {
     
     return (
         <div className={classes.signupForm}>
-            <h2>Sign in to TheMERN</h2>
+            <h2>Sign in to ReflectMe</h2>
             <Form method="post">
                 { error && <p><b>Error:</b> {error.message}</p> }
   

@@ -1,6 +1,6 @@
 body {
     font-family: "Rethink Sans", sans-serif;
-    background-color: #f4f4f4; /* Set a light background color */
+    background: linear-gradient(to right, #1a2c3b, #294757, #3c6382, #4b7bec, #a5b1c2, #ced6e0);
     margin: 0;
     padding: 0;
   }

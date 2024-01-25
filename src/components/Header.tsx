@@ -1,3 +1,5 @@
+// Header.tsx
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
@@ -35,6 +37,15 @@ const Header: React.FC = () => {
                     <>
                         <Link to="/create-post" className={classes.buttonLink}>
                             <button className={classes.button}>New Post</button>
+                        </Link>
+                        <Link to="/my-profile" className={classes.buttonLink}>
+                            <button className={classes.button}>Profile</button>
+                        </Link>
+                        <Link to="/my-posts" className={classes.buttonLink}>
+                            <button className={classes.button}>My Posts</button>
+                        </Link>
+                        <Link to="/messages" className={classes.buttonLink}>
+                            <button className={classes.button}>Messages</button>
                         </Link>
                         <button onClick={handleSignOut} className={classes.button}>
                             Sign Out
