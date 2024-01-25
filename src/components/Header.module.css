@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #fee3ff; /* Dark background color */
-  color: #544f4f; /* Light text color */
+  background-color: #000000; 
+  color: #544f4f; 
 }
 
 .logoLink {
@@ -14,7 +14,7 @@
 
 .logoLink h1 {
   margin: 0;
-  font-size: 1.5rem; /* Adjust the font size */
+  font-size: 1.5rem; 
 }
 
 .headerActions {
@@ -31,18 +31,18 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem; /* Adjust the font size */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  font-size: 1rem;
+  transition: background-color 0.3s ease; 
 
 }
 
 .newPostButton {
-  background-color: #3498db; /* Blue button color */
-  color: #ecf0f1; /* Light text color */
+  background-color: #43474b; 
+  color: #ecf0f1; 
 }
 
 .newPostButton:hover {
-  background-color: #2980b9; /* Darker blue on hover */
+  background-color: #175075; 
 }
 
 .signOutButton {

@@ -1,0 +1,45 @@
+/* App.module.css */
+
+.slideshow {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 16px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 400px; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  .slideshow img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  
+  .slideshow:hover img {
+    transform: scale(1.1);
+  }
+  
+  .slideshow-controls {
+    position: absolute;
+    top: 50%;
+    left: 100%; 
+    transform: translateY(-50%);
+  }
+  
+  .slideshow-controls button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slideshow-controls button:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,45 @@
+/* FeatureCard.module.css */
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .feature-card:hover .feature-icon {
+    color: #ff7f50; /* Change to the color you prefer on hover */
+  }
+  
+  .feature-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .feature-card:hover .feature-content h3 {
+    color: #333; /* Change to the color you prefer on hover */
+  }
+  
+  .feature-content p {
+    color: #555;
+  }
+  
+  .feature-card:hover .feature-content p {
+    color: #777; /* Change to the color you prefer on hover */
+  }
+  

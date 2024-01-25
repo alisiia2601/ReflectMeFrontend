@@ -1,0 +1,38 @@
+/* Card.module.css */
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 30%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background-color: #000;
+    color: #fff;
+  }
+  
+  h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-family: 'Verdana', sans-serif;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-family: 'Georgia', serif;
+    color: #777;
+  }
+  
+  /* Add more styles as needed */
+  

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
+import Home from './components/Home.tsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom';
 import SignUp, { action as signUpAction } from './routes/SignUp.tsx';
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
+      {
+        index: true,
+        loader: indexLoader,
+        element: <Home />,
+      },
       {
         index: true,
         loader: indexLoader,
