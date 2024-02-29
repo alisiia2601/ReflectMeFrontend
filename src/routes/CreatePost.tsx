@@ -1,4 +1,3 @@
-import React from "react";
 import { Form, useActionData } from "react-router-dom";
 import classes from "./CreatePost.module.css";
 import { ActionData } from "../types";
